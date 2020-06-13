@@ -16,6 +16,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 py-2 box-shadow" th:each="entry : ${posts}">
+                    <h2  th:text="${category.getName()}"></h2>
                     <a th:href="@{'/post/' + ${entry.getId()}}">
                         <img class="card-img-top" th:src="'https://picsum.photos/id/'+${entry.getId()}+'/500/350'" alt="Post Title Image">
                         <div class="card-body">
